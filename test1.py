@@ -9,7 +9,7 @@ import os
 import cv2
 import numpy
 from torchvision import datasets, models, transforms
-from network.resnet3 import *
+from network.Resnet import *
 from network.transform import mesonet_data_transforms
 os.environ['CUDA_VISIBLE_DEVICES']='0'
 def main():

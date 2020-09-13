@@ -8,7 +8,7 @@ import argparse
 import os
 import cv2
 from torchvision import datasets, models, transforms
-from network.resnet_sum import *
+from network.resnet_sum1 import *
 from network.xception import *
 from network.transform import mesonet_data_transforms
 from PIL import Image

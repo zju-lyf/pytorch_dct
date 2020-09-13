@@ -9,7 +9,7 @@ import os
 import cv2
 from PIL import Image
 from torchvision import datasets, models, transforms
-from network.resnet_sum import *
+from network.resnet_sum1 import *
 from network.transform import mesonet_data_transforms
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
