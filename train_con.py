@@ -51,10 +51,10 @@ class MyDataset(Dataset):
         #img_dct = torch.cat([img,dct],dim = 0)
         return img, dct, label
 def model_concat(input1,input2,model,model1,model2):
-    _,layer_1 = model1(input1)
-    _,layer_2 = model2(input2)
+    layer_1,_ = model1(input1)
+    layer_2,_ = model2(input2)
     layer_con = torch.cat([layer_1,layer_2],dim = 1)
-    out,_ = model(layer_con)
+    _,out = model(layer_con)
     return out
 def main():
     args = parse.parse_args()

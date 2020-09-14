@@ -205,7 +205,7 @@ class ResNet(nn.Module):
             #print(x.shape)
             x2 = self.layer2(x)
             #print(x.shape)
-            x = self.layer3(x)
+            x = self.layer3(x2)
             x = self.layer4(x)
             x = self.avgpool(x)
             x = torch.flatten(x, 1)

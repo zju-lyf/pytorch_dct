@@ -47,10 +47,10 @@ class MyDataset(Dataset):
             dct = self.transform(dct)
         return img, dct, label
 def model_sum(input1,input2,model,model1):
-    _,layer_1 = model1(input1)
-    _,layer_2 = model(input2)
+    layer_1,_ = model1(input1)
+    layer_2,_ = model(input2)
     layer_sum = layer_1+layer_2
-    out,_ = model(layer_sum)
+    _,out = model(layer_sum)
     return out
 def main():
     args = parse.parse_args()
